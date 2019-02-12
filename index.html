@@ -22,10 +22,21 @@
     document.write("<br>");
     //variaveis
     let ano = 2019;
+
     document.write("Renato tem " + (ano - 1992) + " anos<br>");
     document.write("Matteo tem " + (ano - 1995) + " anos<br>");
     document.write("<br>");
     //operações
-    let media = 6;
-    document.write("A média das idades é " + ((27+24)/2) + "<br>");
+    let idadeRenato = 27;
+    let idadeMatteo = 24;
+
+    let media = (idadeRenato + idadeMatteo) / 2;
+
+    document.write("A média das idades é " + Math.round(media) + "<br>");
+    document.write("<br>");
+
+    let nome = "Renato";
+
+    document.write("A idade de " + nome + " é " + idadeRenato + "<br>");
+
 </script>

@@ -13,6 +13,12 @@
 
 <script type="text/javascript">
 
+    function pulaLinha(){
+
+        document.write("<br>");
+
+    }
+
     //alerta
     //alert("teste bolado com o alerta");
 
@@ -21,16 +27,17 @@
     document.write("O tamanho em cm de você sabe o que é");
     //concatenação
     document.write("<h1>" + (((100 + 30 - 12 - 90 - 10)/3) * 3) + "cm</h1>");
-    document.write("//--------------------------------------------------------------------------//<br>");
+    document.write("//--------------------------------------------------------------------------//");
+    pulaLinha();
     //document.write("Eu acertei: " + (15 / 50 * 100) + "%" + "<br>");
-    document.write("<br>");
+    pulaLinha();
 
     //--------------------------------------------------------------------------//
     //variaveis
     let ano = 2019;
     document.write("Renato tem " + (ano - 1992) + " anos<br>");
     document.write("Matteo tem " + (ano - 1995) + " anos<br>");
-    document.write("<br>");
+    pulaLinha();
 
     //--------------------------------------------------------------------------//
     //operações
@@ -40,13 +47,13 @@
     let media = (idadeRenato + idadeMatteo) / 2;
 
     document.write("A média das idades é " + Math.round(media) + "<br>");
-    document.write("<br>");
+    pulaLinha();
 
     let nome = "Renato";
 
     document.write("A idade de " + nome + " é " + idadeRenato + "<br>");
-    document.write("<br>");
-    document.write("//--------------------------------------------------------------------------//<br>");
+    pulaLinha();
+    document.write("//--------------------------------------------------------------------------//");
     
     //--------------------------------------------------------------------------//
     //exercício
@@ -57,7 +64,7 @@
     let consumoGasolina = caminhoComGasolina / tanque;
 
     document.write("O consumo de Gasolina foi " + consumoGasolina + "km/l<br>");  
-    document.write("<br>");  
+    pulaLinha();
 
     let caminhoComAlcool = 300;
     let consumoAlcool = caminhoComAlcool / tanque;

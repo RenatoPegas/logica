@@ -13,10 +13,19 @@
 
 <script type="text/javascript">
 
+    //--------------------------------------------------------------------------//
+    //função básica
     function pulaLinha(){
 
         document.write("<br>");
 
+    }
+
+    //função com parâmetro 
+    function mostra(placeholder){
+
+        document.write(placeholder);
+        
     }
 
     //alerta
@@ -24,10 +33,10 @@
 
     //--------------------------------------------------------------------------//
     //impressão na tela
-    document.write("O tamanho em cm de você sabe o que é");
+    mostra("O tamanho em cm de você sabe o que é");
     //concatenação
-    document.write("<h1>" + (((100 + 30 - 12 - 90 - 10)/3) * 3) + "cm</h1>");
-    document.write("//--------------------------------------------------------------------------//");
+    mostra("<h1>" + (((100 + 30 - 12 - 90 - 10)/3) * 3) + "cm</h1>");
+    mostra("//--------------------------------------------------------------------------//");
     pulaLinha();
     //document.write("Eu acertei: " + (15 / 50 * 100) + "%" + "<br>");
     pulaLinha();

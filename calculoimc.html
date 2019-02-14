@@ -22,12 +22,16 @@
         pulalinha();
     }
 
+    function calcularImc(peso, altura){
+
+        let imc = peso / (altura * altura);
+        mostra("<h2>O IMC calculado é: " + Math.round(imc) + "</h2>");
+
+    }
+
     let pesoRenato = 67;
     let alturaRenato = 1.73;
+    calcularImc(pesoRenato, alturaRenato);
 
-    let imcRenato = pesoRenato / (alturaRenato * alturaRenato);
-
-    mostra("<h3>O imc do Renato é: " + imcRenato + "<h3>");
-    
 
 </script>

@@ -25,13 +25,19 @@
     function calcularImc(peso, altura){
 
         let imc = peso / (altura * altura);
-        mostra("<h2>O IMC calculado é: " + Math.round(imc) + "</h2>");
+        return imc;
 
     }
 
     let pesoRenato = 67;
     let alturaRenato = 1.73;
-    calcularImc(pesoRenato, alturaRenato);
+    let imcRenato = calcularImc(pesoRenato, alturaRenato);
+    mostra("<h2>O IMC calculado é: " + Math.round(imcRenato) + "</h2>");
+
+    let pesoMatteo = 55;
+    let alturaMatteo = 1.79;
+    let imcMatteo = calcularImc(pesoMatteo, alturaMatteo);
+    mostra("<h2>O IMC calculado é: " + Math.round(imcMatteo) + "</h2>");
 
 
 </script>

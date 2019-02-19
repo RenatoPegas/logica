@@ -1,0 +1,52 @@
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <title>Jogo Adivinhação</title>
+</head>
+
+<body>
+    <h1>Jogo Advinhação</h1>
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+    function pulaLinha() {
+
+        document.write("<br>");
+
+    }
+
+    function mostra(placeholder) {
+
+        document.write(placeholder);
+        pulaLinha();
+    }
+
+    function sorteia(numero){
+        return Math.round(Math.random() * numero);
+    }
+    
+    //const numeroPensado = Math.round(Math.random() * 100);
+    const numeroPensado = sorteia(10);
+    //console.log(numeroPensado);
+    let chute = parseInt(prompt("Digite seu chute"));
+  
+
+    if(chute == numeroPensado){
+
+        mostra("Você acertou");
+
+    }else{
+
+        if (chute > numeroPensado){
+            mostra("Você errou! Seu chute é maior que o número pensado!");
+        }else{
+            mostra("Você errou! Seu chute é menor que o número pensado!");
+         }
+    }
+
+
+</script>

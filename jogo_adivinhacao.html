@@ -32,21 +32,30 @@
     //const numeroPensado = Math.round(Math.random() * 100);
     const numeroPensado = sorteia(10);
     //console.log(numeroPensado);
-    let chute = parseInt(prompt("Digite seu chute"));
-  
 
-    if(chute == numeroPensado){
+    let tentativas = 0;
 
-        mostra("Você acertou");
+    while(tentativas < 3){
 
-    }else{
+        let chute = parseInt(prompt("Digite seu chute"));
 
-        if (chute > numeroPensado){
-            mostra("Você errou! Seu chute é maior que o número pensado!");
-        }else{
-            mostra("Você errou! Seu chute é menor que o número pensado!");
-         }
+        if (chute == numeroPensado) {
+
+            mostra("Você acertou, o numero pensado foi: " + numeroPensado);
+            break;
+
+        } else {
+
+            if (chute > numeroPensado) {
+                mostra("Você errou! Seu chute é maior que o número pensado!");
+            } else {
+                mostra("Você errou! Seu chute é menor que o número pensado!");
+            }
+        }
+        
+        tentativas++;
     }
+   
 
 
 </script>

@@ -19,11 +19,47 @@
 
 <script type="text/javascript">
 
-    //const segredo = Math.round(Math.random() * 10);
-    const segredos = [5, 7, 10, 2, 3]; 
+    function sorteia(){
+        return Math.round(Math.random() * 10);
+    }
+
+    function sorteiaNumeros(quantidade){
+        var segredosFuncao = [];
+        var numero = 0;
+       
+        
+        while(numero < quantidade){
+            
+            var numeroAleatorio = sorteia();
+            
+            if(numeroAleatorio !== 0){
+                var achou = false;
+
+                for(var posicao = 0; posicao < segredosFuncao.length; posicao++){
+                
+                    if(segredosFuncao[posicao] == numeroAleatorio){
+                        achou = true;
+                        break;
+                    }
+                }
+
+                if(achou == false){
+                    segredosFuncao.push(numeroAleatorio); 
+                    numero++       
+                }
+            }   
+        }
+
+        return segredosFuncao;
+    }
+
+    
+    var segredos = sorteiaNumeros(5); 
+
+    console.log(segredos); 
 
 
-    let input = document.querySelector("input");
+    var input = document.querySelector("input");
     input.focus();
     
     function verifica(){
